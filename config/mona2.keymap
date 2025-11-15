@@ -76,10 +76,10 @@
 
         default_layer {
             bindings = <
-&mt SLASH LC(SPACE)  &lt 1 SPACE   &kp U               &mt F7 F9  &kp Q                                                         &kp F            &kp W  &kp R  &kp Y    &kp P
-&kp E                &kp I         &kp A               &kp O      &mt PERIOD COMMA              &mt LS(NON_US_BACKSLASH) MINUS  &kp K            &kp T  &kp N  &kp S    &kp H
-&mt LEFT_CONTROL Z   &kp Z         &kp C               &kp V      &kp L             &kp LEFT    &kp RIGHT                       &kp G            &kp D  &kp M  &mt J Z  &kp B
-&kp LEFT_ALT         &kp LEFT_WIN  &kp LC(LEFT_SHIFT)  &lt 1 TAB  &mkp MB1          &mkp MB2    &lt_to_layer_0 2 ENTER          &lt 1 BACKSPACE                         &kp X
+&mt SLASH LC(SPACE)  &lt 1 SPACE   &kp U           &mt F7 F9  &kp Q                                                         &kp F            &kp W  &kp R  &kp Y    &kp P
+&kp E                &kp I         &kp A           &kp O      &mt PERIOD COMMA              &mt LS(NON_US_BACKSLASH) MINUS  &kp K            &kp T  &kp N  &kp S    &kp H
+&mt LEFT_CONTROL Z   &kp Z         &kp C           &kp V      &kp L             &kp LEFT    &kp RIGHT                       &kp G            &kp D  &kp M  &mt J Z  &kp B
+&kp LEFT_ALT         &kp LEFT_WIN  &kp LEFT_SHIFT  &lt 1 TAB  &mkp MB1          &mkp MB2    &lt_to_layer_0 2 ENTER          &lt 1 BACKSPACE                         &kp X
             >;
 
             sensor-bindings = <&scroll_right_left>;
