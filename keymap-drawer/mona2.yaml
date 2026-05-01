@@ -2,14 +2,14 @@ layout: {zmk_keyboard: mona2}
 layers:
   default:
   - Q
-  - W
+  - X
   - U
-  - Ctl+C
+  - L
   - T
+  - F
+  - W
+  - R
   - Y
-  - U
-  - I
-  - O
   - P
   - E
   - I
@@ -32,17 +32,17 @@ layers:
   - G
   - D
   - M
-  - Z
+  - {t: Z, h: J}
   - B
   - LCTRL
   - LEFT WIN
-  - F16
+  - {t: /, h: LEFT SHIFT}
   - BACKSPACE
   - {t: ENTER, h: '2'}
   - {t: LANGUAGE 2, h: '3'}
   - ''''
   - {t: SPACE, h: '1'}
-  - D
+  - X
   '1':
   - '1'
   - '2'
