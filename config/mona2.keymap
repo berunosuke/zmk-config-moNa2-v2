@@ -53,15 +53,24 @@
         };
     };
 
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp U    &kp LC(C)      &kp T                                      &kp Y        &kp U  &kp I  &kp O  &kp P
-&kp E             &kp I         &kp A    &kp O          &kp G                            &kp F13   &kp K        &kp T  &kp N  &kp S  &kp H
-&mt LEFT_SHIFT Z  &kp X         &kp C    &kp V          &kp B        &kp C               &kp F15   &kp G        &kp D  &kp M  &kp Z  &kp B
-&kp LCTRL         &kp LEFT_WIN  &kp F16  &kp BACKSPACE  &lt 2 ENTER  &lt 3 LANGUAGE_2    &kp APOS  &lt 1 SPACE                       &kp D
+&kp Q             &kp X         &kp U                 &kp L          &kp T                                      &kp F        &kp W  &kp R  &kp Y    &kp P
+&kp E             &kp I         &kp A                 &kp O          &kp G                            &kp F13   &kp K        &kp T  &kp N  &kp S    &kp H
+&mt LEFT_SHIFT Z  &kp X         &kp C                 &kp V          &kp B        &kp C               &kp F15   &kp G        &kp D  &kp M  &mt J Z  &kp B
+&kp LCTRL         &kp LEFT_WIN  &mt LEFT_SHIFT SLASH  &kp BACKSPACE  &lt 2 ENTER  &lt 3 LANGUAGE_2    &kp APOS  &lt 1 SPACE                         &kp X
             >;
 
             sensor-bindings = <&scroll_up_down>;
