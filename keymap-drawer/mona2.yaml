@@ -34,30 +34,30 @@ layers:
   - M
   - {t: Z, h: J}
   - B
-  - LCTRL
+  - LEFT ALT
   - LEFT WIN
   - {t: /, h: LEFT SHIFT}
-  - BACKSPACE
+  - {t: SPACE, h: '1'}
   - {t: ENTER, h: '2'}
   - {t: LANGUAGE 2, h: '3'}
   - ENTER
   - BACKSPACE
   - X
   '1':
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
+  - Sft+1
+  - Sft+2
+  - Sft+3
+  - Sft+4
+  - Sft+5
   - '6'
   - '7'
   - '8'
   - '9'
   - '0'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '['
-  - ']'
+  - Sft+6
+  - Sft+7
+  - Sft+8
+  - Sft+9
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -80,7 +80,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
