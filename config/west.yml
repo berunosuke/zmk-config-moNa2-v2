@@ -12,7 +12,7 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: zettaface  # <-- Input Processor Keybind
       url-base: https://github.com/zettaface
-      - name: urob
+    - name: urob
       url-base: https://github.com/urob
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
@@ -33,7 +33,7 @@ manifest:
     - name: zmk-input-processor-keybind
       remote: zettaface
       revision: main
-      - name: zmk-auto-layer
+    - name: zmk-auto-layer
       remote: urob
       revision: v0.3
     - name: zmk-leader-key
