@@ -16,6 +16,8 @@ manifest:
       url-base: https://github.com/urob
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
+    - name: joelspadin
+      url-base: https://github.com/joelspadin
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -47,6 +49,9 @@ manifest:
       revision: main
     - name: zmk-input-processor-report-rate-limit
       remote: badjeff
+      revision: main
+    - name: zmk-locales
+      remote: joelspadin
       revision: main
       
   self:
