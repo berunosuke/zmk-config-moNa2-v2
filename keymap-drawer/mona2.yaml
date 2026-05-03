@@ -89,7 +89,7 @@ layers:
   '2':
   - B
   - B
-  - B
+  - W
   - B
   - C
   - ^
@@ -98,9 +98,9 @@ layers:
   - DOWN ARROW
   - _
   - C
-  - C
+  - A
+  - S
   - D
-  - C
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&mkp MB3'
