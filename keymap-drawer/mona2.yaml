@@ -1,32 +1,32 @@
 layout: {zmk_keyboard: mona2}
 layers:
   default:
-  - Q
-  - X
+  - {t: Q, h: '3'}
+  - Sft+3
   - U
-  - L
-  - T
+  - '"'
+  - Sft+INT RO
   - F
   - W
   - R
   - Y
-  - {t: P, h: '5'}
+  - {t: P, h: '3'}
   - E
   - I
   - A
   - O
-  - G
-  - F13
+  - {t: ',', h: .}
+  - '-'
   - K
   - T
   - N
   - S
-  - H
+  - {t: H, h: '2'}
   - LEFT CONTROL
   - X
   - C
   - V
-  - B
+  - L
   - LEFT
   - RIGHT
   - G
@@ -38,11 +38,11 @@ layers:
   - LEFT WIN
   - {t: /, h: LEFT SHIFT}
   - {t: SPACE, h: '1'}
-  - {t: ENTER, h: '2'}
-  - {t: LANG2, h: '3'}
+  - {t: INT MUHENKAN, h: '2'}
+  - {t: INT HENKAN, h: '3'}
   - ENTER
   - BACKSPACE
-  - X
+  - '&mkp MB4'
   '1':
   - '1'
   - '2'
@@ -54,38 +54,38 @@ layers:
   - '8'
   - '9'
   - '0'
+  - Sft+1
+  - Sft+2
+  - Sft+3
+  - Sft+4
+  - Sft+5
+  - ']'
+  - /
+  - '4'
+  - '5'
+  - '6'
+  - 'Sft+:'
   - Sft+6
   - Sft+7
   - Sft+8
   - Sft+9
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '4'
-  - '5'
-  - '6'
-  - \
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '['
+  - ;
+  - '}'
+  - Sft+\
   - '1'
   - '2'
   - '3'
-  - '|'
+  - '"'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - INT MUHENKAN
+  - INTERNATIONAL 4
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '4'
   '2':
   - B
   - B
@@ -94,8 +94,8 @@ layers:
   - C
   - ^
   - '&'
-  - '*'
-  - '-'
+  - UP ARROW
+  - DOWN ARROW
   - _
   - C
   - C
@@ -105,9 +105,9 @@ layers:
   - {t: ▽, type: trans}
   - '&mkp MB3'
   - '&mkp MB1'
+  - '&mkp MB1'
   - '&mkp MB2'
-  - '='
-  - +
+  - {t: +, type: held}
   - F1
   - F2
   - F3
@@ -124,37 +124,37 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   '3':
-  - {t: ▽, type: trans}
+  - {type: held}
   - Ctl+Sft+TAB
-  - PRINTSCREEN
   - Ctl+TAB
-  - {t: ▽, type: trans}
+  - PRINTSCREEN
   - {t: ▽, type: trans}
   - HOME
-  - UP ARROW
   - END
+  - LEFT SHIFT
+  - UP ARROW
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Gui+LEFT ARROW
-  - Gui+RIGHT ARROW
-  - Ctl+Gui+LEFT ARROW
+  - Gui+VOLUME DOWN
+  - VOLUME UP
+  - MUTE
   - Ctl+Gui+RIGHT ARROW
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LEFT ARROW
-  - DOWN ARROW
-  - RIGHT ARROW
+  - Ctl+BACKSPACE
+  - Ctl+LEFT
+  - Ctl+RIGHT ARROW
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LEFT SHIFT
-  - Gui+Sft+LEFT ARROW
-  - Gui+Sft+RIGHT ARROW
+  - PP
+  - NEXT
+  - Alt+TAB
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -167,8 +167,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
+  - '&mkp MB1'
+  - '&mkp MB2'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -220,12 +220,32 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - '&mkp MB5'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp MB1'
+  - '&mkp MB1'
+  - '&mkp MB2'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -235,26 +255,6 @@ layers:
   - {t: ▽, type: trans}
   - '&mkp MB1'
   - '&mkp MB2'
-  - '&mkp MB3'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
