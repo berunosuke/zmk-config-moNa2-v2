@@ -45,17 +45,6 @@
             bindings = <&kp>, <&kp>;
         };
 
-        auto_mouse: auto_mouse {
-            compatible = "zmk,behavior-input-two-axis";
-            #binding-cells = <1>;
-            bindings = <&mo 5>;
-            x-input-code = <INPUT_REL_X>;
-            y-input-code = <INPUT_REL_Y>;
-            time-to-live-ms = <500>;
-            delay-ms = <0>;
-            time-to-max-speed-ms = <1>; 
-        };
-
         scroll_up_down: mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
