@@ -107,7 +107,7 @@ layers:
   - '&mkp MB1'
   - '&mkp MB1'
   - '&mkp MB2'
-  - {t: +, type: held}
+  - {t: Sft+;, type: held}
   - F1
   - F2
   - F3
