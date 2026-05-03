@@ -79,7 +79,7 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp X         &kp U                 &kp L        &kp T                                  &kp F          &kp W  &kp R  &kp Y    &kp P
+&kp Q             &kp X         &kp U                 &kp L        &kp T                                  &kp F          &kp W  &kp R  &kp Y    &lt 5 P
 &kp E             &kp I         &kp A                 &kp O        &kp G                       &kp F13    &kp K          &kp T  &kp N  &kp S    &kp H
 &kp LEFT_CONTROL  &kp X         &kp C                 &kp V        &kp B        &kp LEFT       &kp RIGHT  &kp G          &kp D  &kp M  &ht J Z  &kp B
 &kp LEFT_ALT      &kp LEFT_WIN  &mt LEFT_SHIFT SLASH  &lt 1 SPACE  &lt 2 ENTER  &lt 3 LANG2    &kp ENTER  &kp BACKSPACE                         &kp X
@@ -90,10 +90,10 @@
 
         layer_1 {
             bindings = <
-&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-&kp LS(NUMBER_6)  &kp LS(N7)        &kp LS(N8)        &kp LS(N9)        &trans                      &trans  &trans        &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp BACKSLASH
-&trans            &trans            &trans            &trans            &trans            &trans    &trans  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PIPE
-&trans            &trans            &trans            &trans            &trans            &trans    &trans  &trans                                                  &trans
+&kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+&kp LS(NUMBER_6)  &kp LS(N7)    &kp LS(N8)    &kp LS(N9)    &trans                  &trans  &trans        &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp BACKSLASH
+&trans            &trans        &trans        &trans        &trans        &trans    &trans  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PIPE
+&trans            &trans        &trans        &trans        &trans        &trans    &trans  &trans                                                  &trans
             >;
 
             sensor-bindings = <&scroll_right_left>;
