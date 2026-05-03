@@ -58,11 +58,15 @@
     };
 };
 
-// スクロール変換用リスナー
+// 入力イベントリスナーの設定
 &trackball_central_listener {
     status = "okay";
     device = <&trackball_central>;
 
+    // 追加: ポインター移動時に自動的にレイヤー5 (MOUSE) を500ms間アクティブにする
+    input-processors = <&zip_temp_layer 5 500>;
+
+    // レイヤー3が有効な場合は上記の処理を上書きし、スクロール動作に変換する
     scroller {
         layers = <3>;
         input-processors = 
@@ -70,14 +74,5 @@
             <&zip_xy_to_scroll_mapper>,                         // スクロールモードに変更
             <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   // スクロールのX軸反転
             <&zip_scroll_scaler 1 5>;                           // スクロール量を1/5倍
-    };
-};
-
-// オートレイヤー用リスナー (右手側のみで発動)
-/ {
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball_central>;
-        bindings = <&auto_mouse 0>;
     };
 };
