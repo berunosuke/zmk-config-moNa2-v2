@@ -101,8 +101,8 @@
 
         layer_2 {
             bindings = <
-&kp B   &kp B   &kp B   &kp B   &kp C                       &kp CARET  &kp AMPERSAND  &kp UP_ARROW  &kp DOWN_ARROW  &kp UNDERSCORE
-&kp C   &kp C   &kp D   &kp C   &trans             &trans   &mkp MB3   &mkp MB1       &mkp MB1      &mkp MB2        &kp PLUS
+&kp B   &kp B   &kp W   &kp B   &kp C                       &kp CARET  &kp AMPERSAND  &kp UP_ARROW  &kp DOWN_ARROW  &kp UNDERSCORE
+&kp C   &kp A   &kp S   &kp D   &trans             &trans   &mkp MB3   &mkp MB1       &mkp MB1      &mkp MB2        &kp PLUS
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F11    &kp F12  &kp F6     &kp F7         &kp F8        &kp F9          &kp F10
 &trans  &trans  &trans  &trans  &trans  &trans     &trans   &trans                                                  &trans
             >;
