@@ -4,7 +4,7 @@ layers:
   - {t: Q, h: '3'}
   - Sft+3
   - U
-  - ''''
+  - '"'
   - Sft+INT RO
   - F
   - W
@@ -60,11 +60,11 @@ layers:
   - Sft+4
   - Sft+5
   - ']'
-  - \
+  - /
   - '4'
   - '5'
   - '6'
-  - 'Sft+:'
+  - ''''
   - Sft+6
   - Sft+7
   - Sft+8
