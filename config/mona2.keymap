@@ -5,7 +5,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
- 
+
 #define MOUSE 5
 #define SCROLL 6
 
@@ -43,12 +43,12 @@
             bindings = <&kp>, <&kp>;
         };
 
-        // 修正: マウスホイール信号(&msc)から矢印キー(&kp)による確実なスクロールに変更
+        // 元のマウスホイール信号(&msc)に戻す
         scroll_up_down: mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&kp DOWN>, <&kp UP>;
-            tap-ms = <20>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            // tap-ms = <20>; // ホイール信号の場合は不要になることが多いので削除
         };
 
         swapper: swapper {
@@ -57,12 +57,11 @@
             bindings = <&kp LALT>, <&kp TAB>, <&kt LALT>;
         };
 
-        // 修正: 左右スクロールも同様に左右矢印キーに変更
+        // 元のマウスホイール信号(&msc)に戻す
         scroll_right_left: mouse_wheel_right_left {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&kp RIGHT>, <&kp LEFT>;
-            tap-ms = <20>;
+            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
         };
     };
 
