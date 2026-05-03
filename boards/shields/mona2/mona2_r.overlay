@@ -1,9 +1,7 @@
 #include "mona2.dtsi"
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
-// 追加: NRF_PSEL および ピン割り当てマクロ用ヘッダ
 #include <dt-bindings/pinctrl/nrf-pinctrl.h>
-// 追加: INPUT_TRANSFORM_X_INVERT などの入力変換マクロ用ヘッダ
 #include <dt-bindings/zmk/input_transform.h>
 
 &default_transform {
@@ -24,7 +22,7 @@
     spi0_default: spi0_default {    // 通常時(SPI通信中)のピン構成
         group1 {
             psels = <NRF_PSEL(SPIM_SCK, 0, 5)>, // P0.05を指定(SCLK)
-                    <NRF_PSEL(SPIM_MOSI, 0, 4)>, // P0.04を指定(SDIOだからMOSI,MISO両方の役割を担う)
+                    <NRF_PSEL(SPIM_MOSI, 0, 4)>, // P0.04を指定(SDIO)
                     <NRF_PSEL(SPIM_MISO, 0, 4)>;
         };
     };
@@ -54,9 +52,6 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // P0.02を指定(MOTION)
         cpi = <600>;
-        // swap-xy;
-        // invert-x; // COROPIT版ではコメントアウトを外す
-        // invert-y; // COROPIT版ではコメントアウトを外す
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -71,10 +66,9 @@
     scroller {
         layers = <3>;
         input-processors = 
-            // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        // X軸とY軸の入れ替え
             <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,       // X軸反転
             <&zip_xy_to_scroll_mapper>,                         // スクロールモードに変更
             <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   // スクロールのX軸反転
-            <&zip_scroll_scaler 1 5>;                           // スクロール量を1/4倍
+            <&zip_scroll_scaler 1 5>;                           // スクロール量を1/5倍
     };
 };
