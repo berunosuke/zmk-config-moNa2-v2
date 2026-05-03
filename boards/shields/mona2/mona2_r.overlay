@@ -58,7 +58,7 @@
     };
 };
 
-// Overrides for the input listener node
+// スクロール変換用リスナー
 &trackball_central_listener {
     status = "okay";
     device = <&trackball_central>;
@@ -70,5 +70,14 @@
             <&zip_xy_to_scroll_mapper>,                         // スクロールモードに変更
             <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   // スクロールのX軸反転
             <&zip_scroll_scaler 1 5>;                           // スクロール量を1/5倍
+    };
+};
+
+// オートレイヤー用リスナー (右手側のみで発動)
+/ {
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball_central>;
+        bindings = <&auto_mouse 0>;
     };
 };
