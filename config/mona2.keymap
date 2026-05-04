@@ -6,8 +6,10 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#undef ZMK_POINTING_DEFAULT_SCRL_VAL
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+// 障害の原因であった以下の2行を完全に削除しました
+// #undef ZMK_POINTING_DEFAULT_SCRL_VAL
+// #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+
 #define MOUSE 5
 #define SCROLL 6
 
@@ -49,7 +51,6 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-            // tap-ms の記述は動作停止の原因となるため完全に排除
         };
 
         swapper: swapper {
@@ -62,7 +63,6 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
-            // tap-ms の記述は動作停止の原因となるため完全に排除
         };
     };
 
