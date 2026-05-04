@@ -6,10 +6,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-// 障害の原因であった以下の2行を完全に削除しました
-// #undef ZMK_POINTING_DEFAULT_SCRL_VAL
-// #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
-
+// 私が誤って削除を指示した必須設定を完全に復元
+#undef ZMK_POINTING_DEFAULT_SCRL_VAL
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 #define MOUSE 5
 #define SCROLL 6
 
@@ -47,10 +46,12 @@
             bindings = <&kp>, <&kp>;
         };
 
+        // 私が誤って削除した tap-ms = <20>; を復元し、確実なスクロール信号を送信させる
         scroll_up_down: mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            tap-ms = <20>;
         };
 
         swapper: swapper {
@@ -59,10 +60,12 @@
             bindings = <&kp LALT>, <&kp TAB>, <&kt LALT>;
         };
 
+        // こちらも同様に復元
         scroll_right_left: mouse_wheel_right_left {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+            tap-ms = <20>;
         };
     };
 
@@ -85,6 +88,7 @@
 &kp LEFT_CONTROL  &kp X             &kp C                 &kp V        &kp L               &kp LEFT            &kp RIGHT  &kp G          &kp D  &kp M  &ht J Z  &kp B
 &kp LEFT_ALT      &kp LEFT_WIN      &mt LEFT_SHIFT SLASH  &lt 1 SPACE  &lt 2 INT_MUHENKAN  &lt 3 INT_HENKAN    &kp ENTER  &kp BACKSPACE                           &mkp MB4
             >;
+            // 左側エンコーダーのみを指定し、クラッシュを防止
             sensor-bindings = <&scroll_up_down>;
         };
 
