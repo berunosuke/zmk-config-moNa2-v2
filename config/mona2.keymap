@@ -49,6 +49,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            // tap-ms の記述は動作停止の原因となるため完全に排除
         };
 
         swapper: swapper {
@@ -61,6 +62,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+            // tap-ms の記述は動作停止の原因となるため完全に排除
         };
     };
 
