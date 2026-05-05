@@ -2,7 +2,7 @@ layout: {zmk_keyboard: mona2}
 layers:
   default:
   - {t: Q, h: '3'}
-  - Sft+3
+  - SPACE
   - U
   - '"'
   - Sft+INT RO
