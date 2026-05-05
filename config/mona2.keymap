@@ -103,7 +103,7 @@
         layer_1 {
             bindings = <
 &kp NUMBER_1      &kp NUMBER_2      &kp NUMBER_3         &kp NUMBER_4      &kp NUMBER_5                                     &kp NUMBER_6       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)     &kp LS(NUMBER_4)  &kp LS(N5)                    &kp RIGHT_BRACKET  &kp SLASH          &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LS(SEMI)
+&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)     &kp LS(NUMBER_4)  &kp LS(N5)                    &kp RIGHT_BRACKET  &kp BACKSLASH      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LS(SEMI)
 &kp LS(NUMBER_6)  &kp LS(N7)        &kp LS(N8)           &kp LS(N9)        &kp LEFT_BRACKET  &kp SEMI    &kp RIGHT_BRACE    &kp LS(BACKSLASH)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOUBLE_QUOTES
 &trans            &kp INT_MUHENKAN  &kp INTERNATIONAL_4  &trans            &trans            &trans      &trans             &trans                                                       &kp N4
             >;
@@ -124,13 +124,13 @@
 
         layer_3 {
             bindings = <
-&trans  &kp LC(LS(TAB))        &kp LC(TAB)      &kp PRINTSCREEN  &trans                                       &kp HOME  &kp END            &kp LEFT_SHIFT  &kp UP_ARROW         &trans
-&trans  &kp LG(C_VOLUME_DOWN)  &kp C_VOLUME_UP  &kp K_MUTE       &kp LC(LG(RIGHT_ARROW))              &trans  &trans    &kp LC(BACKSPACE)  &kp LC(LEFT)    &kp LC(RIGHT_ARROW)  &trans
-&trans  &kp C_PP               &kp C_NEXT       &kp LA(TAB)      &trans                   &trans      &trans  &trans    &kp DELETE         &kp PAGE_UP     &kp PAGE_DOWN        &trans
-&trans  &trans                 &trans           &trans           &mkp MB1                 &mkp MB2    &trans  &trans                                                            &trans
+&trans  &kp LC(LS(TAB))        &kp LC(TAB)      &kp PRINTSCREEN  &trans                                       &kp HOME  &kp END            &kp LEFT_SHIFT  &kp UP_ARROW   &trans
+&trans  &kp LG(C_VOLUME_DOWN)  &kp C_VOLUME_UP  &kp K_MUTE       &kp LC(LG(RIGHT_ARROW))              &trans  &trans    &kp LC(BACKSPACE)  &kp LEFT        &kp DOWN       &kp RIGHT
+&trans  &kp C_PP               &kp C_NEXT       &kp LA(TAB)      &trans                   &trans      &trans  &trans    &kp DELETE         &kp PAGE_UP     &kp PAGE_DOWN  &trans
+&trans  &trans                 &trans           &trans           &mkp MB1                 &mkp MB2    &trans  &trans                                                      &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LA(TAB) LS(LA(TAB))>;
+            sensor-bindings = <&inc_dec_kp TAB LS(TAB)>;
         };
 
         layer_4 {
