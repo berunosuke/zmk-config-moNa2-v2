@@ -6,7 +6,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-// GUIツールでは自動削除されてしまう、スクロール機能の必須設定を復元
+// スクロール機能の必須設定
 #undef ZMK_POINTING_DEFAULT_SCRL_VAL
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
@@ -36,6 +36,7 @@
     };
 
     behaviors {
+        // GUIエラーの原因だった &mt . , を正しく動かすための専用機能
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -44,18 +45,17 @@
             bindings = <&kp>, <&kp>;
         };
 
+        // マウスをクラッシュさせていた tap-ms を排除しクリーン化
         scroll_up_down: mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-            tap-ms = <20>; // スクロール信号の安定化
         };
 
         scroll_right_left: mouse_wheel_right_left {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
-            tap-ms = <20>; // スクロール信号の安定化
         };
     };
 
@@ -71,8 +71,7 @@
         MB1_INT4_to0: MB1_INT4_to0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            // クリック判定と文字変換の間に僅かな猶予(30ms)を持たせ、OSの処理落ちによる不発を防ぐ
-            wait-ms = <30>; 
+            wait-ms = <30>;
             tap-ms = <30>;
             bindings = <&mkp MB1>, <&kp INT4>, <&to 0>;
         };
@@ -83,8 +82,8 @@
 
         default_layer {
             bindings = <
-&lt 3 INT4        &kp LS(INT_RO)    &kp U                 &kp L        &kp INT1                                     &kp F          &kp W  &kp R  &kp Y    &lt 3 P
-&kp E             &kp I             &kp A                 &kp O        &mt PERIOD COMMA                        &kp MINUS  &kp K          &kp T  &kp N  &kp S    &lt 2 H
+&lt 3 INT4        &kp SPACE         &kp U                 &kp L        &kp INT1                                     &kp F          &kp W  &kp R  &kp Y    &lt 3 P
+&kp E             &kp I             &kp A                 &kp O        &ht PERIOD COMMA                        &kp MINUS  &kp K          &kp T  &kp N  &kp S    &lt 2 H
 &kp EQUAL         &kp X             &kp C                 &kp V        &kp Q               &kp LEFT            &kp RIGHT  &kp G          &kp D  &kp M  &ht J Z  &kp B
 &kp LALT          &kp LGUI          &mt LSHIFT SLASH      &lt 1 INT5   &mkp MB1            &mkp MB2            &kp ENTER  &kp BACKSPACE                           &tog 2
             >;
@@ -93,10 +92,10 @@
 
         layer_1 {
             bindings = <
-&kp N1            &kp N2            &kp N3             &kp N4            &kp N5                                                  &kp N6             &kp N7        &kp N8        &kp N9           &kp N0
-&kp LS(N1)        &kp SQT           &kp LS(N3)         &kp LBKT          &kp LS(N7)                         &kp INT1             &kp EQUAL          &kp LS(N8)    &kp RBKT      &kp LS(RBKT)     &mt MINUS LS(SEMI)
-&kp LS(SLASH)     &kp LS(N4)        &kp LS(N5)         &kp LS(N6)        &kp LS(N2)        &kp LS(SQT)      &kp LS(INT3)         &kp INT3           &kp LS(N9)    &kp INT_RO    &kp LS(INT_RO)   &kakezan
-&trans            &kp LANG5         &trans             &trans            &trans            &trans           &trans               &trans                                                          &kp LS(MINUS)
+&kp N1            &kp N2            &kp N3             &kp N4            &kp N5                                                  &kp N6             &kp N7         &kp N8           &kp N9               &kp N0
+&kp LS(N1)        &kp LS(N7)        &kp LS(N3)         &kp RBKT          &kp LS(N6)                         &kp INT_RO           &kp LS(MINUS)      &kp LS(SQT)    &kp NON_US_HASH  &kp LS(NON_US_HASH)  &ht MINUS LS(SEMI)
+&kp LS(SLASH)     &kp LS(N4)        &kp LS(N5)         &kp EQUAL         &kp LBKT          &kp LS(N2)       &kp LS(INT_YEN)      &kp INT_YEN        &kp LS(N8)     &kp LS(N9)       &kp LS(RBKT)         &kakezan
+&trans            &kp LANG5         &trans             &trans            &trans            &trans           &trans               &trans                                                                  &kp LS(INT_RO)
             >;
             sensor-bindings = <&scroll_right_left>;
         };
@@ -114,7 +113,7 @@
         layer_3 {
             bindings = <
 &trans  &kp LS(TAB)  &kp TAB      &kp LC(TAB)  &kp PSCRN                                      &kp HOME  &kp END   &kp UP    &kp PAGE_UP   &trans
-&trans  &kp C_VOL_DN &kp C_VOL_UP &kp K_MUTE   &kp C_NEXT           &trans   &trans           &trans    &trans    &kp LC(BSPC)  &kp LEFT &kp DOWN &kp RIGHT
+&trans  &kp C_VOL_DN &kp C_VOL_UP &kp K_MUTE   &kp C_NEXT           &trans   &trans           &trans    &kp LC(BSPC)  &kp LEFT &kp DOWN &kp RIGHT
 &kp F1  &kp F2       &kp F3       &kp F4       &kp F5     &kp F11   &kp F12  &kp F6           &kp F7    &kp F8    &kp F9    &kp F10
 &trans  &trans       &trans       &trans       &trans     &trans    &trans   &trans                                         &trans
             >;
