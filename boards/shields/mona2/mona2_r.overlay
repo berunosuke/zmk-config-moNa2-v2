@@ -53,8 +53,8 @@
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // P0.02を指定(MOTION)
         cpi = <600>;
         
-        // ★追加: センサーのY軸（上下）を反転させる
-        invert-y;
+        // ▼ マウスポインターの上下反転を直すため無効化
+        // invert-y;
         
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
@@ -67,8 +67,8 @@
     status = "okay";
     device = <&trackball_central>;
 
-    // ポインター移動時に自動的にレイヤー5 (MOUSE) を500ms間アクティブにする
-   // input-processors = <&zip_temp_layer 5 500>;
+    // ▼ オートマウスレイヤー（5番）の強制起動によるエラーを防ぐため無効化
+    // input-processors = <&zip_temp_layer 5 500>;
 
     // レイヤー3が有効な場合は上記の処理を上書きし、スクロール動作に変換する
     scroller {
@@ -77,7 +77,8 @@
             <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,       // X軸反転
             <&zip_xy_to_scroll_mapper>,                         // スクロールモードに変更
             <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   // スクロールのX軸反転
-            <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,   // ★追加: スクロールのY軸反転
+            // ▼ スクロール操作の上下反転を直すため無効化
+            // <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_scroll_scaler 1 5>;                           // スクロール量を1/5倍
     };
 };
