@@ -81,9 +81,7 @@
 
         default_layer {
             bindings = <
-// ▼ 右端を LS(INT_RO) [アンダーバー] に変更
 &lt 3 INT4        &kp SPACE         &kp U                 &kp L        &kp LS(INT_RO)                               &kp F          &kp W  &kp R  &kp Y    &lt 3 P
-// ▼ 右端の H から &lt 指定を外し、単独のキーに変更
 &kp E             &kp I             &kp A                 &kp O        &custom_ht PERIOD COMMA                 &kp MINUS  &kp K          &kp T  &kp N  &kp S    &kp H
 &kp LEFT_CONTROL  &kp X             &kp C                 &kp V        &kp Q               &kp LEFT            &kp RIGHT  &kp G          &kp D  &kp M  &custom_ht J Z  &kp B
 &kp LALT          &kp LGUI          &mt LSHIFT SLASH      &lt 1 INT5   &mkp MB1            &mkp MB2            &kp ENTER  &kp BACKSPACE                           &tog 2
@@ -96,7 +94,6 @@
 &kp N1            &kp N2            &kp N3             &kp N4            &kp N5                                                  &kp N6             &kp N7         &kp N8           &kp N9               &kp N0
 &kp LS(N1)        &kp SQT           &kp LS(N3)         &kp LBKT          &kp LS(LBKT)                       &kp INT1             &kp LS(MINUS)      &kp LS(N8)     &kp RBKT         &kp LS(RBKT)         &custom_ht MINUS LS(SEMI)
 &kp LS(SLASH)     &kp LS(N4)        &kp LS(N5)         &kp LS(N6)        &kp LS(N2)       &kp SEMI          &kp LS(INT_YEN)      &kp INT_YEN        &kp LS(N9)     &kp NON_US_HASH  &kp LS(NON_US_HASH)  &kakezan
-// ▼ 右下を LS(MINUS) [イコール] に変更
 &trans            &kp LANG5         &trans             &trans            &trans           &trans            &trans               &trans                                                                  &kp LS(MINUS)
             >;
             sensor-bindings = <&scroll_right_left>;
@@ -105,9 +102,9 @@
         layer_2 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                                 &trans    &trans    &trans    &mkp MB3       &to 0
-&trans  &trans  &trans  &trans  &trans            &trans       &trans  &mkp MB5  &mkp MB1  &MB1_INT4_to0  &mkp MB2  &mkp MB4
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans  &trans    &trans    &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans                                     &trans
+&trans  &trans  &trans  &trans  &trans            &trans    &mkp MB5   &mkp MB1  &MB1_INT4_to0  &mkp MB2  &mkp MB4
+&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans     &trans    &trans         &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans                                        &trans
             >;
             sensor-bindings = <&scroll_up_down>;
         };
@@ -115,9 +112,9 @@
         layer_3 {
             bindings = <
 &trans  &kp LS(TAB)  &kp TAB      &kp LC(TAB)  &kp PSCRN                                      &kp HOME  &kp END   &kp LSHIFT    &kp UP        &trans
-&trans  &kp C_VOL_DN &kp C_VOL_UP &kp K_MUTE   &kp C_NEXT           &trans   &trans           &trans    &trans    &kp LC(BSPC)  &kp LEFT      &kp DOWN &kp RIGHT
-&kp F1  &kp F2       &kp F3       &kp F4       &kp F5     &kp F11   &kp F12  &kp F6           &kp F7    &kp F8    &kp F9        &kp F10
-&trans  &trans       &trans       &trans       &trans     &trans    &trans   &trans                                             &trans
+&trans  &kp C_VOL_DN &kp C_VOL_UP &kp K_MUTE   &kp C_NEXT           &trans    &trans          &kp LC(BSPC)  &kp LEFT      &kp DOWN      &kp RIGHT
+&kp F1  &kp F2       &kp F3       &kp F4       &kp F5     &kp F11   &kp F12   &kp F6          &kp F7    &kp F8        &kp F9        &kp F10
+&trans  &trans       &trans       &trans       &trans     &trans    &trans    &trans                                                &trans
             >;
             sensor-bindings = <&inc_dec_kp TAB LS(TAB)>;
         };
@@ -125,9 +122,9 @@
         layer_4 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans            &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans                                                                    &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans            &trans        &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &bootloader      &trans        &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans                                                                    &bt BT_CLR_ALL
             >;
             sensor-bindings = <&scroll_up_down>;
         };
