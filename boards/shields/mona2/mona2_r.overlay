@@ -68,7 +68,7 @@
     device = <&trackball_central>;
 
     // ポインター移動時に自動的にレイヤー5 (MOUSE) を500ms間アクティブにする
-    input-processors = <&zip_temp_layer 5 500>;
+   // input-processors = <&zip_temp_layer 5 500>;
 
     // レイヤー3が有効な場合は上記の処理を上書きし、スクロール動作に変換する
     scroller {
