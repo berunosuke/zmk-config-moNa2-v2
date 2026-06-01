@@ -96,7 +96,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&mkp MB3'
-  - {t: default, h: toggle}
+  - {t: default, h: '3'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
