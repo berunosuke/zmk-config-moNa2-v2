@@ -77,6 +77,8 @@
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
         diode-direction = "col2row";
+        // チャタリング対策（2026-11-25）：離したときの判定を初期値 5ms から 10ms に延ばす
+        debounce-release-ms = <10>;
             row-gpios
                 = <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
                 , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
